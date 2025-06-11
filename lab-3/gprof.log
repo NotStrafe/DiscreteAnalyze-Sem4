@@ -1,0 +1,264 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00     1572     0.00     0.00  MyToLower(char)
+  0.00      0.00     0.00       70     0.00     0.00  TString::~TString()
+  0.00      0.00     0.00       63     0.00     0.00  TString::TString()
+  0.00      0.00     0.00       42     0.00     0.00  TString::CStr() const
+  0.00      0.00     0.00       42     0.00     0.00  TString::Length() const
+  0.00      0.00     0.00       21     0.00     0.00  TCaseICmp::operator()(TString const&, TString const&) const
+  0.00      0.00     0.00        7     0.00     0.00  TrimNl(char*)
+  0.00      0.00     0.00        7     0.00     0.00  TBTree::Search(TBTree::TNode*, TString const&, unsigned long&)
+  0.00      0.00     0.00        7     0.00     0.00  TString::TString(char const*)
+  0.00      0.00     0.00        6     0.00     0.00  TCaseICmp::Eq(TString const&, TString const&) const
+  0.00      0.00     0.00        4     0.00     0.00  TBTree::Exists(TBTree::TNode*, TString const&)
+  0.00      0.00     0.00        3     0.00     0.00  TBTree::Find(TString const&, unsigned long&)
+  0.00      0.00     0.00        3     0.00     0.00  TBTree::Insert(TString const&, unsigned long)
+  0.00      0.00     0.00        3     0.00     0.00  TString::operator=(TString const&)
+  0.00      0.00     0.00        2     0.00     0.00  TBTree::InsertNonFull(TBTree::TNode*, TString const&, unsigned long)
+  0.00      0.00     0.00        1     0.00     0.00  TBTree::TNode::TNode(bool)
+  0.00      0.00     0.00        1     0.00     0.00  TBTree::TNode::~TNode()
+  0.00      0.00     0.00        1     0.00     0.00  TBTree::Remove(TBTree::TNode*, TString const&)
+  0.00      0.00     0.00        1     0.00     0.00  TBTree::Remove(TString const&)
+  0.00      0.00     0.00        1     0.00     0.00  TBTree::Destroy(TBTree::TNode*)
+  0.00      0.00     0.00        1     0.00     0.00  TBTree::TBTree()
+  0.00      0.00     0.00        1     0.00     0.00  TBTree::~TBTree()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2023 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00    1572/1572        TCaseICmp::operator()(TString const&, TString const&) const [14]
+[9]      0.0    0.00    0.00    1572         MyToLower(char) [9]
+-----------------------------------------------
+                0.00    0.00       7/70          main [7]
+                0.00    0.00      63/70          TBTree::TNode::~TNode() [25]
+[10]     0.0    0.00    0.00      70         TString::~TString() [10]
+-----------------------------------------------
+                0.00    0.00      63/63          TBTree::TNode::TNode(bool) [24]
+[11]     0.0    0.00    0.00      63         TString::TString() [11]
+-----------------------------------------------
+                0.00    0.00      42/42          TCaseICmp::operator()(TString const&, TString const&) const [14]
+[12]     0.0    0.00    0.00      42         TString::CStr() const [12]
+-----------------------------------------------
+                0.00    0.00      42/42          TCaseICmp::operator()(TString const&, TString const&) const [14]
+[13]     0.0    0.00    0.00      42         TString::Length() const [13]
+-----------------------------------------------
+                0.00    0.00       1/21          TBTree::InsertNonFull(TBTree::TNode*, TString const&, unsigned long) [23]
+                0.00    0.00       1/21          TBTree::Remove(TBTree::TNode*, TString const&) [26]
+                0.00    0.00       7/21          TBTree::Search(TBTree::TNode*, TString const&, unsigned long&) [16]
+                0.00    0.00      12/21          TCaseICmp::Eq(TString const&, TString const&) const [18]
+[14]     0.0    0.00    0.00      21         TCaseICmp::operator()(TString const&, TString const&) const [14]
+                0.00    0.00    1572/1572        MyToLower(char) [9]
+                0.00    0.00      42/42          TString::CStr() const [12]
+                0.00    0.00      42/42          TString::Length() const [13]
+-----------------------------------------------
+                0.00    0.00       7/7           main [7]
+[15]     0.0    0.00    0.00       7         TrimNl(char*) [15]
+-----------------------------------------------
+                0.00    0.00       3/7           TBTree::Find(TString const&, unsigned long&) [20]
+                0.00    0.00       4/7           TBTree::Exists(TBTree::TNode*, TString const&) [19]
+[16]     0.0    0.00    0.00       7         TBTree::Search(TBTree::TNode*, TString const&, unsigned long&) [16]
+                0.00    0.00       7/21          TCaseICmp::operator()(TString const&, TString const&) const [14]
+                0.00    0.00       5/6           TCaseICmp::Eq(TString const&, TString const&) const [18]
+-----------------------------------------------
+                0.00    0.00       7/7           main [7]
+[17]     0.0    0.00    0.00       7         TString::TString(char const*) [17]
+-----------------------------------------------
+                0.00    0.00       1/6           TBTree::Remove(TBTree::TNode*, TString const&) [26]
+                0.00    0.00       5/6           TBTree::Search(TBTree::TNode*, TString const&, unsigned long&) [16]
+[18]     0.0    0.00    0.00       6         TCaseICmp::Eq(TString const&, TString const&) const [18]
+                0.00    0.00      12/21          TCaseICmp::operator()(TString const&, TString const&) const [14]
+-----------------------------------------------
+                0.00    0.00       1/4           TBTree::Remove(TString const&) [27]
+                0.00    0.00       3/4           TBTree::Insert(TString const&, unsigned long) [21]
+[19]     0.0    0.00    0.00       4         TBTree::Exists(TBTree::TNode*, TString const&) [19]
+                0.00    0.00       4/7           TBTree::Search(TBTree::TNode*, TString const&, unsigned long&) [16]
+-----------------------------------------------
+                0.00    0.00       3/3           main [7]
+[20]     0.0    0.00    0.00       3         TBTree::Find(TString const&, unsigned long&) [20]
+                0.00    0.00       3/7           TBTree::Search(TBTree::TNode*, TString const&, unsigned long&) [16]
+-----------------------------------------------
+                0.00    0.00       3/3           main [7]
+[21]     0.0    0.00    0.00       3         TBTree::Insert(TString const&, unsigned long) [21]
+                0.00    0.00       3/4           TBTree::Exists(TBTree::TNode*, TString const&) [19]
+                0.00    0.00       2/2           TBTree::InsertNonFull(TBTree::TNode*, TString const&, unsigned long) [23]
+-----------------------------------------------
+                0.00    0.00       1/3           TBTree::Remove(TBTree::TNode*, TString const&) [26]
+                0.00    0.00       2/3           TBTree::InsertNonFull(TBTree::TNode*, TString const&, unsigned long) [23]
+[22]     0.0    0.00    0.00       3         TString::operator=(TString const&) [22]
+-----------------------------------------------
+                0.00    0.00       2/2           TBTree::Insert(TString const&, unsigned long) [21]
+[23]     0.0    0.00    0.00       2         TBTree::InsertNonFull(TBTree::TNode*, TString const&, unsigned long) [23]
+                0.00    0.00       2/3           TString::operator=(TString const&) [22]
+                0.00    0.00       1/21          TCaseICmp::operator()(TString const&, TString const&) const [14]
+-----------------------------------------------
+                0.00    0.00       1/1           TBTree::TBTree() [29]
+[24]     0.0    0.00    0.00       1         TBTree::TNode::TNode(bool) [24]
+                0.00    0.00      63/63          TString::TString() [11]
+-----------------------------------------------
+                0.00    0.00       1/1           TBTree::Destroy(TBTree::TNode*) [28]
+[25]     0.0    0.00    0.00       1         TBTree::TNode::~TNode() [25]
+                0.00    0.00      63/70          TString::~TString() [10]
+-----------------------------------------------
+                0.00    0.00       1/1           TBTree::Remove(TString const&) [27]
+[26]     0.0    0.00    0.00       1         TBTree::Remove(TBTree::TNode*, TString const&) [26]
+                0.00    0.00       1/21          TCaseICmp::operator()(TString const&, TString const&) const [14]
+                0.00    0.00       1/6           TCaseICmp::Eq(TString const&, TString const&) const [18]
+                0.00    0.00       1/3           TString::operator=(TString const&) [22]
+-----------------------------------------------
+                0.00    0.00       1/1           main [7]
+[27]     0.0    0.00    0.00       1         TBTree::Remove(TString const&) [27]
+                0.00    0.00       1/4           TBTree::Exists(TBTree::TNode*, TString const&) [19]
+                0.00    0.00       1/1           TBTree::Remove(TBTree::TNode*, TString const&) [26]
+-----------------------------------------------
+                0.00    0.00       1/1           TBTree::~TBTree() [30]
+[28]     0.0    0.00    0.00       1         TBTree::Destroy(TBTree::TNode*) [28]
+                0.00    0.00       1/1           TBTree::TNode::~TNode() [25]
+-----------------------------------------------
+                0.00    0.00       1/1           main [7]
+[29]     0.0    0.00    0.00       1         TBTree::TBTree() [29]
+                0.00    0.00       1/1           TBTree::TNode::TNode(bool) [24]
+-----------------------------------------------
+                0.00    0.00       1/1           main [7]
+[30]     0.0    0.00    0.00       1         TBTree::~TBTree() [30]
+                0.00    0.00       1/1           TBTree::Destroy(TBTree::TNode*) [28]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2023 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [15] TrimNl(char*)          [26] TBTree::Remove(TBTree::TNode*, TString const&) [10] TString::~TString()
+   [9] MyToLower(char)        [27] TBTree::Remove(TString const&) [22] TString::operator=(TString const&)
+  [23] TBTree::InsertNonFull(TBTree::TNode*, TString const&, unsigned long) [16] TBTree::Search(TBTree::TNode*, TString const&, unsigned long&) [12] TString::CStr() const
+  [20] TBTree::Find(TString const&, unsigned long&) [28] TBTree::Destroy(TBTree::TNode*) [13] TString::Length() const
+  [24] TBTree::TNode::TNode(bool) [29] TBTree::TBTree()   [18] TCaseICmp::Eq(TString const&, TString const&) const
+  [25] TBTree::TNode::~TNode() [30] TBTree::~TBTree()     [14] TCaseICmp::operator()(TString const&, TString const&) const
+  [19] TBTree::Exists(TBTree::TNode*, TString const&) [11] TString::TString()
+  [21] TBTree::Insert(TString const&, unsigned long) [17] TString::TString(char const*)

@@ -1,0 +1,7 @@
+1749677318: 29: Dmalloc version '5.5.2' from 'http://dmalloc.com/'
+1749677318: 29: flags = 0, logfile 'dmalloc.log'
+1749677318: 29: interval = 0, addr = 0, seen # = 0, limit = 0
+1749677318: 29: threads enabled, lock-on = 0, lock-init = 2
+1749677318: 29: starting time = 1749677318
+1749677318: 29: process pid = 2639
+1749677318: 29: ending time = 1749677318, elapsed since start = 0:00:00
