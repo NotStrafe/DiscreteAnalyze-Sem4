@@ -283,7 +283,7 @@ int main() {
   }
 
   std::string S = P;
-  S.push_back('\1');  // терминатор, которого нет в T
+  S.push_back('\1');
   SuffixTree tree(S);
 
   std::vector<int> ms = tree.matching_statistics_start(T);
